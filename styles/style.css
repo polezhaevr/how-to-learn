@@ -9,8 +9,9 @@
   font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
+/*стилизация шапки сайта*/
 .header {
-  position: absolute;
+  position: relative;
   width: 1600px;
   display: flex;
   margin: 0 auto;
@@ -19,7 +20,6 @@
   max-height: 756px;
   background-color: #f2f2f2;
   color: #000000; 
-  /* выше установили ограничения для секции */
 }
 
 .header__logo {
@@ -77,6 +77,61 @@
   z-index: 2;
 }
 
+/*конец стилизации шапки сайта*/
+
+/*стилизация секции descriptions*/
+
+.description {
+  width: 1600px;
+}
+
+.two-columns {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.two-columns__brief {
+  width: 175px;
+}
+
+.two-columns__main-text {
+  width: 80%; 
+  min-width: 784px;
+}
+
+.two-columns__title {
+  font-size: 18px;
+  line-height: normal; 
+  font-weight: normal;
+  color: #2f80ed; 
+  margin: 0;
+}
+
+.two-columns__paragraph {
+  font-size: 24px;
+  line-height: 34px; 
+  font-weight: normal;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.two-columns__paragraph:last-child {
+  margin-bottom: 0px;
+}
+
+.two-columns__span-accent {
+  font-size:24px; 
+  line-height: 34px; 
+  font-weight: 600;
+}
+/*конец стилизации descriptions*/
+
+
 /* и элемента с модификатором вида ключ-значение */
 .table__cell_theme_dark {
   width: 200px;
@@ -84,3 +139,4 @@
   margin-right: 0;
   margin-top: 80px;
 }
+
