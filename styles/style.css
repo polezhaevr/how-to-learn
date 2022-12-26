@@ -1,5 +1,5 @@
 .page {
-  min-width: 1100px;
+  min-width: 1600px;
   /* мы ещё не умеем делать мобильную версию сайта, */
   /* поэтому выше установлена минимальная ширина страницы */
   max-width: 1600px;
@@ -14,12 +14,14 @@
 /*стилизация шапки сайта*/
 .header {
   position: relative;
+  
   display: flex;
   margin: 0 auto;
   height: 100vh;
   min-height: 600px;
   max-height: 756px;
   background-color: #f2f2f2;
+  overflow: hidden;
 }
 
 .header__logo {
@@ -194,7 +196,7 @@
 
 .feynman {
   position: relative;
-  height: 890px;
+  min-height: 890px;
   margin: 0 auto;
   background-color: #f2f2f2;
   background-image: url("../images/feynman.png");
