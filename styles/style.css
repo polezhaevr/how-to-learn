@@ -14,8 +14,8 @@
 /*стилизация шапки сайта*/
 .header {
   position: relative;
-  
   display: flex;
+  align-items: center;
   margin: 0 auto;
   height: 100vh;
   min-height: 600px;
@@ -24,7 +24,7 @@
   overflow: hidden;
 }
 
-.header__logo {
+.logo_place_header{
   position: absolute;
   top: 30px;
   left: 64px;
@@ -35,9 +35,8 @@
 }
 
 .header__title {
-  display: flex;
-  align-items: center;
-  width: 730px;
+  max-width: 730px;
+  width: 100%;
   font-size: 102px;
   line-height: 96px;
   font-weight: 600;
@@ -50,9 +49,11 @@
   position: absolute;
   bottom: 30px;
   left: 64px;
-  width: 388px;
+  max-width: 388px;
+  width: 100%;
   font-size: 18px;
   line-height: 25px;
+  margin: 0;
   font-weight: normal;
   z-index: 4;
 }
@@ -60,6 +61,10 @@
 .header__link {
   text-decoration: none;
   color: #2f80ed;
+}
+
+.header__link:hover {
+  color: #000000;
 }
 
 .header__square-pic {
@@ -99,7 +104,8 @@
 }
 
 .two-columns__brief {
-  width: 175px;
+  max-width: 175px;
+  width: 100%;
   font-size: 18px;
   line-height: 1.2;
   font-weight: normal;
@@ -139,6 +145,7 @@
 }
 
 .section-title {
+  width: 60%;
   margin: 0 auto;
   line-height: 1.15;
   font-size: 60px;
@@ -148,6 +155,7 @@
 }
 
 .section-subtitle {
+  width: 60%;
   margin: 0 auto;
   padding-top: 20px;
   line-height: 34px;
@@ -209,7 +217,8 @@
   line-height: 1.15;
   font-size: 120px;
   font-weight: 600;
-  width: 648px;
+  max-width: 648px;
+  width: 100%;
   margin: 0 auto;
   padding-top: 100px;
 }
@@ -233,6 +242,10 @@
   color: #2f80ed;
 }
 
+.feynman__link:hover {
+  color: #000000;
+}
+
 /*конец стилизации feynman*/
 
 /*стилизация секции kaufman*/
@@ -240,26 +253,38 @@
 .kaufman {
   position: relative;
   overflow: hidden;
+  background-color: #1f1f1f;
+  z-index: -1; 
+}
+
+.kaufman__triangle {
+  position: absolute;
+  width: 877px;
+  height: 877px;
+  top: 0px; 
+  right: -210px;
   background-image: url("../images/kaufman-triangle.svg");
-  background-position: top 0 right -210px;
   background-repeat: no-repeat;
   background-size: 877px 877px;
-  background-color: #1f1f1f;
-
+  z-index:-2;
 }
 
 .section-title_theme_dark {
+  position: relative;
   color: white;
   padding-top: 90px;
 }
 
 .section-subtitle_theme_dark {
+  position: relative;
+  z-index: 3;
   color: white; 
 }
 
 .table_theme_dark {
   margin-bottom: 90px;
 }
+
 
 .table__cell_theme_dark {
   color: white;
@@ -273,22 +298,22 @@
 /*стилизация footer*/
 .footer {
   background-color: #1f1f1f;
-  padding-top: 60px;
-  padding-bottom: 40px;
-
+  min-height: 350px;
+  
 }
 
 .footer__columns {
   width: 90%;
   margin: 0 auto;
-  min-height: 350px;
   display: flex;
   justify-content: space-between;
+  padding-top: 60px;
+  margin-bottom: 40px;
+  min-height: 250px;
 }
 
 .footer__column {
   display: flex;
-
 }
 
 .footer__column_content_copyright {
@@ -298,7 +323,7 @@
   flex-basis: 711px;
 }
 
-.footer__logo_place {
+.logo_place_footer{
   position: static;
   background-image: url('../images/logo_place_footer.svg');
   background-repeat: no-repeat;
@@ -312,6 +337,8 @@
   line-height: 25px;
   font-size: 18px;
   font-weight: normal;
+  padding-top: 18px;
+  margin-bottom: 18px;
 }
 
 
@@ -329,57 +356,33 @@
 }
 
 .footer__column-link {
-  line-height: 30px;
+  display: flex;
+  align-items: center;
+  line-height: 31px;
   font-size: 18px;
   font-weight: normal;
   color: white;
+  text-decoration: none;
+}
+
+.footer__column-link:hover {
+  color: #2f80ed;
+}
+
+.footer__column-links {
   display: flex;
   flex-direction: column;
 }
 
-.footer__column-links {
-  text-decoration: none;
-  color: white;
-}
-
 .footer__column_content_social {
   flex-direction: column;
-
 }
+
 
 .footer__social-icon {
-  position: relative;
-  text-decoration: none;
-  color: white;
-  background-image: url('../images/youtube-icon.svg');
-  background-size: 16px 16px;
-  background-position: 0 7px;
-  background-repeat: no-repeat;
-  padding-left: 25px;
+width: 16px;
+height: 16px;
+margin-right: 10px;
 }
-
-.footer__social-icon:nth-child(2) {
-  position: relative;
-  text-decoration: none;
-  color: white;
-  background-image: url('../images/vk_color_white.svg');
-  background-size: 16px 16px;
-  background-position: 0 7px;
-  background-repeat: no-repeat;
-  padding-left: 25px;
-}
-
-.footer__social-icon:nth-child(3) {
-  position: relative;
-  text-decoration: none;
-  color: white;
-  background-image: url('../images/tiktok-icon.svg');
-  background-size: 16px 16px;
-  background-position: 0 7px;
-  background-repeat: no-repeat;
-  padding-left: 25px;
-}
-
-
 
 /*конец footer*/
