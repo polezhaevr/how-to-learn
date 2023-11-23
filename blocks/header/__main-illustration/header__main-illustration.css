@@ -8,3 +8,9 @@
   object-position: right bottom;
   object-fit: cover;
 }
+
+@media screen and (max-width: 800px) {
+  .header__main-illustration {
+    display: none;
+  }
+}
