@@ -7,4 +7,6 @@
 * HTML
 * БЭМ 
 * БЭМ nested  
-Для создания сетки был использован flexbox
+* Для создания сетки был использован flexbox
+
+[github pages клац](https://polezhaevr.github.io/how-to-learn/)
